@@ -27,6 +27,7 @@ HAVING COUNT(cust.customer_id) > 300;
 ```
 
 Результат выполнения такого запроса:
+
 ![shop](https://github.com/NightWalkerZ488/hw-sql2-loskutovvv/blob/main/w1.PNG)
 
 ### Задание 2
