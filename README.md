@@ -1,4 +1,4 @@
-<img width="405" height="251" alt="изображение" src="https://github.com/user-attachments/assets/fb4cf61f-360a-4f35-b06b-20330e289c6e" /># Домашнее задание к занятию "`SQL. Часть 2`" - `Лоскутов В.В.`
+Домашнее задание к занятию "`SQL. Часть 2`" - `Лоскутов В.В.`
 
 ---
 ### Задание 1
@@ -27,7 +27,7 @@ HAVING COUNT(cust.customer_id) > 300;
 ```
 
 Результат выполнения такого запроса:
-!(shop)[https://github.com/NightWalkerZ488/hw-sql2-loskutovvv/blob/main/w1.PNG]
+![shop](https://github.com/NightWalkerZ488/hw-sql2-loskutovvv/blob/main/w1.PNG)
 
 ### Задание 2
 
@@ -49,7 +49,7 @@ WHERE length > (
 
 Результат выполнения:
 
-!(shop)[https://github.com/NightWalkerZ488/hw-sql2-loskutovvv/blob/main/w2.PNG]
+![shop](https://github.com/NightWalkerZ488/hw-sql2-loskutovvv/blob/main/w2.PNG)
 
 
 ### Задание 3
@@ -61,5 +61,16 @@ WHERE length > (
 Текст запроса:
 
 ```
+SELECT
+    DATE_FORMAT(payment_date, '%Y-%m') AS payment_month,
+    SUM(amount) AS total_amount,
+    COUNT(*) AS rental_count
+FROM payment
+GROUP BY payment_month
+ORDER BY total_amount DESC
+LIMIT 1;
 
 ```
+Результат выполнения:
+
+![shop](https://github.com/NightWalkerZ488/hw-sql2-loskutovvv/blob/main/w3.PNG)
